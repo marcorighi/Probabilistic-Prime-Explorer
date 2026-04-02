@@ -1,46 +1,45 @@
 # Probabilistic-Prime-Explorer
-A computational framework for generating and analyzing prime numbers using optimized state-space exploration and aggressive tree pruning.
 
-[![DOI: Software](https://zenodo.org/badge/DOI/10.5281/zenodo.[INSERISCI_DOI_SOFTWARE].svg)](https://doi.org/10.5281/zenodo.[INSERISCI_DOI_SOFTWARE])
-[![DOI: Dataset](https://zenodo.org/badge/DOI/10.5281/zenodo.19382555.svg)](https://doi.org/10.5281/zenodo.19382555)
+[![Preprint DOI](https://img.shields.io/badge/Preprint-10.5281/zenodo.19386311-blue)](https://doi.org/10.5281/zenodo.19386311)
+[![Software DOI](https://img.shields.io/badge/Software-10.5281/zenodo.19383835-green)](https://doi.org/10.5281/zenodo.19383835)
+[![Dataset DOI](https://img.shields.io/badge/Dataset-10.5281/zenodo.19382555-red)](https://doi.org/10.5281/zenodo.19382555)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A computational framework for generating and analyzing structurally constrained prime numbers using optimized state-space exploration and aggressive tree pruning. 
+**High-Rate Prime Generation and Analysis Pipeline** *Submitted to Experimental Mathematics*
 
-This repository contains the source code, data extraction scripts, and analytical pipeline supporting our computational number theory manuscript. The generation algorithm explores primes of the form $\prod p_i^{a_i} - 1$ via an odometer-like mechanism enhanced with exponent caching and a deterministic 64-bit Miller-Rabin primality test.
+This repository contains the source code, analytical pipelines, and theoretical framework for the **Probabilistic-Prime-Explorer**, an optimized multi-radix prime generation algorithm designed to explore heavily structured multiplicative integer subsets.
 
----
+## 📌 Project Overview
 
-## 📂 Data & Code Availability
+This project presents an empirical and statistical analysis of a specialized prime generation algorithm. Utilizing an optimized multi-radix odometer mechanism coupled with aggressive tree pruning and O(1) power caching, we evaluate candidate integers derived from primorial bounded roots.
 
-To ensure full reproducibility of our results, the research outputs are distributed as follows:
+By pushing the computational threshold up to n = 8000, we mapped the state-space traversal into an Information Retrieval framework, empirically proving a strict zero-duplication rate and highly enriched precision.
 
-
-
-* **The Manuscript:** Available as a preprint on arXiv: `[arXiv:XXXX.XXXXX]`
-* **The Source Code (This Repository):** Hosted on GitHub and permanently archived on Zenodo at `[DOI_SOFTWARE]`.
-* **The Raw Dataset (4.3 GB):** Due to the massive scale of the computational logs generated during the state-space exploration (up to $N=8000$), the raw dataset is hosted externally on Zenodo at [https://doi.org/10.5281/zenodo.19382555](https://doi.org/10.5281/zenodo.19382555). It contains the 26 execution logs and the aggregated statistical summaries (`final_results.csv`).
-
----
-
-## 🏗️ Repository Structure
-
-* `prime_generator_high_rate.py`: The core algorithm. A highly optimized PyPy3 script for probabilistic prime generation and state-space pruning.
-* `extract_results.sh`: A Bash pipeline used to parse the massive raw logs and extract 11 core statistical metrics (including F1-Score, Hit Rate, and Domain Space Coverage).
-* `[NOME_FILE_ANALISI].py`: Python modules for advanced statistical and structural analysis (e.g., Cramér's model gaps, Chebyshev bias).
-* `CITATION.cff`: Citation metadata for researchers using this framework.
+### Key Findings
+* **Density Enrichment:** The generated sequence demonstrates a persistent asymptotic enrichment in prime density, converging to a limit of approximately **2.5175 times** the Prime Number Theorem expectation.
+* **Fractal Memory:** Topological analysis of the prime gaps reveals an exceptionally high Hurst exponent (**H ≈ 0.73**), strongly rejecting the null hypothesis of a memoryless random walk and indicating significant fractal-like long-range dependence.
+* **Algebraic Polarization:** The sequence exhibits an extreme, deterministic Chebyshev bias, demonstrating that the primorial bounds fundamentally break probabilistic residue symmetry.
 
 ---
 
-## 🚀 Quick Start & Reproduction
+## 📂 Open Science Package
+
+To ensure full reproducibility, this research is distributed across three connected modules:
+
+1. **📄 The Manuscript (Preprint):** Available on Zenodo at [DOI: 10.5281/zenodo.19386311](https://doi.org/10.5281/zenodo.19386311)
+2. **💻 The Source Code (This Repo):** Archived version (v1.0.0) at [DOI: 10.5281/zenodo.19383835](https://doi.org/10.5281/zenodo.19383835)
+3. **📊 The Dataset:** The massive raw computational logs and extracted statistical summaries (4.3 GB) are hosted on a dedicated Zenodo repository at [DOI: 10.5281/zenodo.19382555](https://doi.org/10.5281/zenodo.19382555)
+
+---
+
+## ⚙️ Installation & Usage
 
 ### Prerequisites
-To run the high-rate generator efficiently, we strongly recommend using **PyPy3** instead of standard CPython for massive performance gains.
-* PyPy3 (or Python 3.8+)
-* Bash environment (for data extraction)
-* standard data-science stack (`pandas`, `numpy`, `matplotlib`) for the analytical pipeline.
+Due to the computational intensity of the state-space exploration, the generator is optimized for **PyPy3**. The analytical modules run on standard Python 3.9+.
 
-### 1. Generating Primes
-To start exploring the state-space for a specific initial prime set:
 ```bash
-pypy3 prime_generator_high_rate.py
+# Install PyPy3 (Ubuntu/Debian example)
+sudo apt-get install pypy3
+
+# Install analytical requirements
+pip install numpy pandas scipy matplotlib
