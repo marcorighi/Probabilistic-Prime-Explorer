@@ -193,4 +193,39 @@ python prime_frontier_analysis_ram.py results_brpt_server/log_final_result/ resu
 *Generated Files:* * `results/prime_frontier_analysis_ram_execution.log`
 * `results/prime_frontier_analysis_ram_capstone_metrics.csv`
 * Generates `_chebyshev_bias_n*.png` and `_cramer_gaps_n*.png` plots for all tested threshold limits (from `n=10` up to `n=8000`).
+  
+## 📊 Analytical Results Output
+
+The archive `latest_results.tgz` contains the complete output of the 8-stage analytical pipeline. These results form the empirical basis for the figures and tables presented in the manuscript.
+
+### Content Overview
+Once extracted, the `results/` directory contains approximately **11MB** of data, including:
+
+* **23+ Core Statistical Plots**: PNG files covering gap distributions, pruning efficiency, and time scaling.
+* **Frontier Analysis**: Detailed Chebyshev bias plots (`_chebyshev_bias_n*.png`) and Cramér's model evaluations (`_cramer_gaps_n*.png`) for every threshold from $n=10$ to $n=8000$.
+* **Numerical Datasets**: CSV files for each analysis stage (autocorrelations, modular residues, 2-Adic valuations, and enrichment factors).
+* **Execution Logs**: Technical logs for every analytical module to ensure full transparency and step-by-step reproducibility.
+
+### How to access the results
+To extract the archive and browse the generated plots and data:
+```bash
+tar -xvzf latest_results.tgz
 ```
+### 📂 Key Files in this Archive (Expanded)
+
+| File Category / Pattern | Description |
+| :--- | :--- |
+| `log_statistical_analysis_ram_analysis_summary.csv` | **The Core Dataset**: The primary summary containing all fundamental statistics from the raw logs. |
+| `prime_frontier_analysis_ram_chebyshev_bias_n*.png` | **Chebyshev Bias**: Visualizations of the oscillation in prime counts for each threshold $n$. |
+| `prime_frontier_analysis_ram_cramer_gaps_n*.png` | **Gap Distribution vs Cramér**: Comparison of observed gaps against the classic Cramér probabilistic model. |
+| `additional_prime_analysis_ram_monte_carlo_*.png/csv` | **Monte Carlo Simulations**: Results and plots comparing the experimental data with stochastic models. |
+| `advanced_prime_analysis_ram_enrichment_factor.*` | **Enrichment Ratio**: Shows how the prime density increases compared to standard distributions. |
+| `comprehensive_prime_analysis_ram_gap_autocorrelation.*` | **Autocorrelation**: Analysis of the statistical dependence between successive prime gaps. |
+| `comprehensive_prime_analysis_ram_extreme_gaps.*` | **Extreme Value Analysis**: Study of the largest and most rare gaps found in the state-space. |
+| `advanced_prime_analysis_ram_valuation_analysis.csv` | **2-Adic Valuation**: Mathematical analysis of the p-adic properties of the generated numbers. |
+| `comprehensive_prime_analysis_ram_pruning_efficiency.*` | **Algorithm Performance**: Visual proof of how the Aggressive Tree Pruning reduces the search space. |
+| `comprehensive_prime_analysis_ram_spatial_cdf.png` | **Spatial Distribution**: The Cumulative Distribution Function of the primes in the explored space. |
+| `*_execution.log` | **Audit Trail**: Technical logs for each script, providing proof of the parameters used and execution time. |
+
+
+
