@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, dataset, or the theoretical concepts in your research, please cite our preprint."
+authors:
+  - family-names: "Righi"
+    given-names: "Marco"
+    affiliation: "National Research Council of Italy (CNR)"
+  - family-names: "Baldi"
+    given-names: "Michele"
+title: "Probabilistic-Prime-Explorer: High-Rate Prime Generation and Analysis Pipeline"
+doi: 10.5281/zenodo.19383835
+date-released: 2026-04-02
+url: "https://github.com/marcorighi/Probabilistic-Prime-Explorer"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Righi"
+      given-names: "Marco"
+    - family-names: "Baldi"
+      given-names: "Michele"
+  title: "Probabilistic-Prime-Explorer: High-Rate Prime Generation and Analysis Pipeline"
+  doi: 10.5281/zenodo.19386311
+  year: 2026
+  journal: "Zenodo"
+  notes: "Preprin"
