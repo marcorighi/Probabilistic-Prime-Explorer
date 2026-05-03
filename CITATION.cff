@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this software, dataset, or the theoretical concepts in your research, please cite our preprint."
+message: "If you use this software, dataset, or the theoretical concepts in your research, please cite the archived software release and the associated preprint."
 authors:
   - family-names: "Righi"
     given-names: "Marco"
@@ -7,7 +7,8 @@ authors:
   - family-names: "Baldi"
     given-names: "Michele"
 title: "Probabilistic-Prime-Explorer: High-Rate Prime Generation and Analysis Pipeline"
-doi: 10.5281/zenodo.19383835
+version: "1.0.2"
+doi: 10.5281/zenodo.19388930
 date-released: 2026-04-02
 url: "https://github.com/marcorighi/Probabilistic-Prime-Explorer"
 preferred-citation:
@@ -17,8 +18,7 @@ preferred-citation:
       given-names: "Marco"
     - family-names: "Baldi"
       given-names: "Michele"
-  title: "Probabilistic-Prime-Explorer: High-Rate Prime Generation and Analysis Pipeline"
+  title: "Primes of the Form V(E)-1 in a Filtered Smooth State Space: Density, Residue Classes, and Ordered Gaps"
   doi: 10.5281/zenodo.19386311
   year: 2026
   journal: "Zenodo"
-  notes: "Preprin"
