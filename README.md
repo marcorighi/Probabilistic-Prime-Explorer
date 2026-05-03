@@ -1,13 +1,23 @@
 # Probabilistic-Prime-Explorer
 
-[![Preprint DOI](https://img.shields.io/badge/Preprint-10.5281/zenodo.19386311-blue)](https://doi.org/10.5281/zenodo.19386311)
-[![Software DOI](https://img.shields.io/badge/Software-10.5281/zenodo.19383835-green)](https://doi.org/10.5281/zenodo.19383835)
-[![Dataset DOI](https://img.shields.io/badge/Dataset-10.5281/zenodo.19382555-red)](https://doi.org/10.5281/zenodo.19382555)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Preprint DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19386311.svg)](https://doi.org/10.5281/zenodo.19386311)
+[![Software DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19388930.svg)](https://doi.org/10.5281/zenodo.19388930)
+[![Dataset DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19382555.svg)](https://doi.org/10.5281/zenodo.19382555)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-**High-Rate Prime Generation and Analysis Pipeline** *Submitted to Experimental Mathematics*
+Computational code and reproducibility package for the manuscript:
 
-This repository contains the source code, analytical pipelines, and theoretical framework for the **Probabilistic-Prime-Explorer**, an optimized multi-radix prime generation algorithm designed to explore heavily structured multiplicative integer subsets.
+**Primes of the Form V(E)-1 in a Filtered Smooth State Space: Density, Residue Classes, and Ordered Gaps**
+
+This repository contains the source code, analysis scripts, and reproducibility utilities for exploring primes of the form
+
+\[
+P = V(E)-1, \qquad V(E)=\prod_{i=1}^n p_i^{e_i},
+\]
+
+inside an implementation-defined filtered smooth state space.
+
+The project is intended as an experimental-mathematics reproducibility package. It documents the generation algorithm, the deterministic filters, the raw execution logs, and the analysis pipeline used in the manuscript.
 
 ## 📌 Project Overview
 
@@ -15,20 +25,27 @@ This project presents an empirical and statistical analysis of a specialized pri
 
 By pushing the computational threshold up to n = 8000, we mapped the state-space traversal into an Information Retrieval framework, empirically proving a strict zero-duplication rate and highly enriched precision.
 
-### Key Findings
-* **Density Enrichment:** The generated sequence demonstrates a persistent asymptotic enrichment in prime density, converging to a limit of approximately **2.5175 times** the Prime Number Theorem expectation.
-* **Fractal Memory:** Topological analysis of the prime gaps reveals an exceptionally high Hurst exponent (**H ≈ 0.73**), strongly rejecting the null hypothesis of a memoryless random walk and indicating significant fractal-like long-range dependence.
-* **Algebraic Polarization:** The sequence exhibits an extreme, deterministic Chebyshev bias, demonstrating that the primorial bounds fundamentally break probabilistic residue symmetry.
+## Key Observations
+
+- **Filtered-state prime density.** The empirical prime density inside the implemented filtered state space is higher than the naive ambient benchmark \(1/\log x\). Most of this enhancement is explained by deterministic pre-sieving, especially the enforced parity constraint and the exclusion of candidates congruent to \(5 \pmod{10}\).
+
+- **Residue-class polarization.** The generated primes show strong residue-class polarization. This is a deterministic consequence of the multiplicative form \(V(E)=\prod_i p_i^{e_i}\) and the shift \(P=V(E)-1\), not a claim about Chebyshev bias in the unrestricted sequence of primes.
+
+- **Ordered-gap diagnostics.** The ordered gap sequence induced by the filtered construction displays nontrivial descriptive structure. The reported gap statistics, autocorrelation, and R/S slopes are treated as construction-specific diagnostics, not as evidence of a universal stochastic or fractal law for prime gaps.
+
+- **Reproducibility.** The repository provides the generation code, analysis scripts, execution logs, and archived outputs needed to reproduce the tables and figures in the manuscript.
 
 ---
 
-## 📂 Open Science Package
+## Open Science Package
 
-To ensure full reproducibility, this research is distributed across three connected modules:
+To support reproducibility, the project is distributed across three connected archived resources:
 
-1. **📄 The Manuscript (Preprint):** Available on Zenodo at [DOI: 10.5281/zenodo.19386311](https://doi.org/10.5281/zenodo.19386311)
-2. **💻 The Source Code (This Repo): Archived version used for the manuscript (v1.0.2) at [DOI: 10.5281/zenodo.19383835](https://doi.org/10.5281/zenodo.19383835)
-3. **📊 The Dataset:** The massive raw computational logs and extracted statistical summaries (4.3 GB) are hosted on a dedicated Zenodo repository at [DOI: 10.5281/zenodo.19382555](https://doi.org/10.5281/zenodo.19382555)
+1. **Preprint:** DOI `10.5281/zenodo.19386311`
+2. **Source code:** archived software release v1.0.2, DOI `10.5281/zenodo.19388930`
+3. **Dataset:** raw computational logs and extracted statistical summaries, DOI `10.5281/zenodo.19382555`
+
+The software DOI identifies the archived code release used for the manuscript. The dataset DOI identifies the larger raw-log and summary-data archive.
 
 ---
 
