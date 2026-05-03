@@ -8,7 +8,7 @@ Part of the Experimental Mathematics Research Pipeline.
 This final module applies cutting-edge number theory metrics to the generated sets:
 1. Chebyshev's Bias: Cumulative racing of prime residues modulo 3.
 2. Cramér's Conjecture: Scaling of record-breaking prime gaps against log^2(p).
-3. Hurst Exponent (R/S Analysis): Long-term memory and fractal persistence in gaps.
+3. R/S slope diagnostic: exploratory rescaled-range statistic for the induced ordered gap sequence.
 4. Prime Constellations: Frequency of Twin, Cousin, and Sexy primes.
 
 Outputs (saved exclusively to /results):
@@ -75,8 +75,9 @@ def stream_primes_from_log(filepath):
 
 def estimate_hurst(gaps):
     """
-    Estimates the Hurst Exponent using Rescaled Range (R/S) Analysis.
-    Assesses long-range dependence in the sequence of prime gaps.
+    Estimates an exploratory R/S slope using rescaled-range analysis.
+    This is used only as a descriptive diagnostic for the ordered gap sequence induced by
+    the filtered construction.
     """
     if len(gaps) < 100:
         return np.nan
