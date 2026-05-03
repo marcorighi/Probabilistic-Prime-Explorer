@@ -27,7 +27,7 @@ By pushing the computational threshold up to n = 8000, we mapped the state-space
 To ensure full reproducibility, this research is distributed across three connected modules:
 
 1. **📄 The Manuscript (Preprint):** Available on Zenodo at [DOI: 10.5281/zenodo.19386311](https://doi.org/10.5281/zenodo.19386311)
-2. **💻 The Source Code (This Repo):** Archived version (v1.0.0) at [DOI: 10.5281/zenodo.19383835](https://doi.org/10.5281/zenodo.19383835)
+2. **💻 The Source Code (This Repo): Archived version used for the manuscript (v1.0.2) at [DOI: 10.5281/zenodo.19383835](https://doi.org/10.5281/zenodo.19383835)
 3. **📊 The Dataset:** The massive raw computational logs and extracted statistical summaries (4.3 GB) are hosted on a dedicated Zenodo repository at [DOI: 10.5281/zenodo.19382555](https://doi.org/10.5281/zenodo.19382555)
 
 ---
